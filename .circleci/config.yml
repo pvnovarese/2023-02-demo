@@ -79,14 +79,14 @@ workflows:
             - anchore
           requires:
             - build
-  weekly:
-    triggers: #use the triggers key to indicate a scheduled build
-      - schedule:
-          cron: "0 18 * * 2" # tuesday at 18:00
-          filters:
-            branches:
-              only:
-                - main
+#  weekly:
+#    triggers: #use the triggers key to indicate a scheduled build
+#      - schedule:
+#          cron: "0 18 * * 2" # tuesday at 18:00
+#          filters:
+#            branches:
+#              only:
+#                - main
     jobs:
       - build:
          context:
